@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as Styled from './App.style';
+import { BaseBallImage, EndTalkImage } from './assets/images';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Styled.Container>
+            <Styled.Header></Styled.Header>
+            <Styled.Section>
+                <Styled.GameButton>
+                    <img src={BaseBallImage} alt="야구장 사진" />
+                </Styled.GameButton>
+                <Styled.GameButton>
+                    <img src={EndTalkImage} alt="끝말잇기 사진" />
+                </Styled.GameButton>
+            </Styled.Section>
+            <Styled.InputSection></Styled.InputSection>
+        </Styled.Container>
+    );
 }
 
 export default App;
