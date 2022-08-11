@@ -1,20 +1,19 @@
-import * as Styled from './App.style';
-import { BaseBallImage, EndTalkImage } from './assets/images';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Baseball from './components/baseball/Baseball';
+import EndTalk from './components/endTalk/EndTalk';
+import Main from './components/main/Main';
+import Header from './components/Header';
 
 function App() {
     return (
-        <Styled.Container>
-            <Styled.Header></Styled.Header>
-            <Styled.Section>
-                <Styled.GameButton>
-                    <img src={BaseBallImage} alt="야구장 사진" />
-                </Styled.GameButton>
-                <Styled.GameButton>
-                    <img src={EndTalkImage} alt="끝말잇기 사진" />
-                </Styled.GameButton>
-            </Styled.Section>
-            <Styled.InputSection></Styled.InputSection>
-        </Styled.Container>
+        <BrowserRouter>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Main />} />
+                <Route path="/baseball" element={<Baseball />} />
+                <Route path="/endTalk" element={<EndTalk />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 

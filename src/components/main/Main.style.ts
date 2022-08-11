@@ -1,30 +1,25 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.main`
-    width: 500px;
-    height: 700px;
-    margin: auto;
-    margin-top: 50px;
-    border-radius: 10px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-`;
-
-export const Header = styled.header`
-    height: 70px;
-`;
-
-export const Section = styled.section`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 570px;
+    min-width: 1200px;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    margin: auto;
     background-color: #85a4ba;
 `;
 
 export const GameButton = styled.button`
+    h1 {
+        margin-bottom: 50px;
+        color: white;
+    }
+
     img {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         object-fit: contain;
 
         transition: all 0.2s;
@@ -35,8 +30,4 @@ export const GameButton = styled.button`
             transform: scale(1.4);
         }
     }
-`;
-
-export const InputSection = styled.section`
-    height: 60px;
 `;
