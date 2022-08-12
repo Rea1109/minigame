@@ -1,4 +1,4 @@
-# 미니게임 (개발중 ...)
+# 미니게임 
 
 [게임 하러가기](https://rea-minigame.herokuapp.com/)  
 React , Typescript 기반 프로젝트
