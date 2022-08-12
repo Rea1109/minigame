@@ -1,27 +1,13 @@
 import * as Styled from './BaseballPlay.style';
-import { ComIcon, UserIcon } from '../../../assets/images';
+import { PlayInfo } from '../../../commons/type';
+import { replaceIcon } from '../../../commons/utility';
 
-type PlayInfo = {
-    player: string;
-    answer: string;
-};
-
-type BaseballPlayProps = {
-    info?: PlayInfo[];
-};
-
-const BaseballPlay = ({ info }: BaseballPlayProps) => {
+const BaseballPlay = ({ info }: { info: PlayInfo }) => {
     return (
-        <>
-            <Styled.Answer>
-                <img src={UserIcon} />
-                <span>324</span>
-            </Styled.Answer>
-            <Styled.Answer isComputer={true}>
-                <img src={ComIcon} />
-                <span>1 Strike 1 Ball 1 Out</span>
-            </Styled.Answer>
-        </>
+        <Styled.Answer isComputer={info.player === 'com'}>
+            <img src={replaceIcon(info.player)} />
+            <span>{info.value}</span>
+        </Styled.Answer>
     );
 };
 
