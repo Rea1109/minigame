@@ -22,3 +22,37 @@ export const isValidationCheck = (userInput: number): boolean => {
     }
     return true;
 };
+
+export const makeRandomNumber = (): number => {
+    const numbers: string[] = [];
+    let num = 0;
+
+    while (numbers.length < 3) {
+        num = Math.floor(Math.random() * 9) + 1;
+        if (numbers.indexOf(String(num)) === -1) {
+            numbers.push(String(num));
+        }
+    }
+    return Number(numbers.join(''));
+};
+
+export const checkBaseBallNumber = (input: string, answer: string): string => {
+    if (input === answer) return 'Home Run';
+
+    let strike = 0;
+    let ball = 0;
+    let out = 0;
+
+    const inputs = input.split('');
+    const answers = answer.split('');
+
+    inputs.forEach((el, index) => {
+        if (answers.includes(el)) {
+            index === answers.indexOf(el) ? strike++ : ball++;
+        } else {
+            out++;
+        }
+    });
+
+    return `${strike} strike , ${ball} ball , ${out} out`;
+};

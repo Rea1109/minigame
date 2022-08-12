@@ -6,7 +6,7 @@ const Header = () => {
     const { pathname } = useLocation();
     return (
         <Container>
-            <MainTitle onClick={() => route('/')}>{pathname === '/' ? 'Mini Game' : 'Go Back'}</MainTitle>
+            <MainTitle onClick={() => route('/')}>{pathname === '/' ? '미니게임' : '메인화면으로'}</MainTitle>
         </Container>
     );
 };
@@ -17,6 +17,8 @@ const Container = styled.header`
     min-width: 1200px;
     width: 100%;
     height: 80px;
+    background-color: #ffc107;
+    color: white;
     text-align: center;
 `;
 

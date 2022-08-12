@@ -7,6 +7,7 @@ export const Container = styled.main`
 `;
 
 export const Section = styled.section`
+    position: relative;
     width: 400px;
     height: 80%;
     margin: auto;
@@ -16,10 +17,35 @@ export const Section = styled.section`
     overflow: hidden;
 `;
 
+export const GameStartButton = styled.button`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #00bcd4;
+    color: white;
+    font-size: 32px;
+`;
+
+export const GameRestartButton = styled.button`
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #ed4b82;
+    color: white;
+    font-size: 25px;
+`;
+
 export const GameDisplay = styled.div`
     width: 100%;
     height: 90%;
-    padding: 20px 30px;
+    padding: 80px 30px;
     background-color: #85a4ba;
 
     overflow: scroll;
