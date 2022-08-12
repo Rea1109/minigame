@@ -9,6 +9,7 @@ const Baseball = () => {
     const [isStart, setIsStart] = useState(false);
     const [answerNumber, setAnswerNumber] = useState<number>();
     const [playInfo, setPlayInfo] = useState<PlayInfo[]>([]);
+
     const inputRef = useRef<HTMLInputElement>(null);
 
     const handleEnter = (event: KeyboardEvent<HTMLInputElement>) => {

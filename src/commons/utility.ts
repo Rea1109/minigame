@@ -12,6 +12,11 @@ export const checkNumber = (number: number): boolean => {
 };
 
 export const isValidationCheck = (userInput: number): boolean => {
+    if (String(userInput).split('').includes('0')) {
+        alert('숫자를 제대로 입력해주세요');
+        return false;
+    }
+
     if (userInput < 100 || userInput > 999) {
         alert('숫자를 제대로 입력해주세요');
         return false;

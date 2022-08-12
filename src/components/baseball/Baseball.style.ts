@@ -4,6 +4,8 @@ export const Container = styled.main`
     min-width: 1200px;
     width: 100%;
     height: calc(100vh - 80px);
+    padding-top: 50px;
+    background-color: beige;
 `;
 
 export const Section = styled.section`
@@ -11,7 +13,6 @@ export const Section = styled.section`
     width: 400px;
     height: 80%;
     margin: auto;
-    margin-top: 50px;
     border-radius: 10px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     overflow: hidden;
@@ -45,10 +46,10 @@ export const GameRestartButton = styled.button`
 export const GameDisplay = styled.div`
     width: 100%;
     height: 90%;
-    padding: 80px 30px;
+    padding: 80px 30px 20px 30px;
     background-color: #85a4ba;
 
-    overflow: scroll;
+    overflow-y: scroll;
 `;
 
 export const UserInput = styled.div`

@@ -17,8 +17,8 @@ const Container = styled.header`
     min-width: 1200px;
     width: 100%;
     height: 80px;
-    background-color: #ffc107;
-    color: white;
+    background-color: beige;
+    color: gray;
     text-align: center;
 `;
 
